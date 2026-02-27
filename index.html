@@ -1,11 +1,335 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>East Dean & Friston Gardening Club</title>
+  <meta name="description" content="A friendly gardening club for East Dean, Friston and neighbouring areas. Talks, outings, monthly tasks and seasonal inspiration." />
+
+  <style>
+    :root{
+      --ink:#1b1f1c;
+      --muted:#5a645f;
+      --bg:#fbfaf7;
+      --card:#ffffff;
+      --line:#e7e3da;
+      --accent:#2f6b4f;
+      --accent-2:#c9a24a;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 18px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--ink);
+      background: radial-gradient(1200px 700px at 15% 10%, rgba(47,107,79,.12), transparent 60%),
+                  radial-gradient(900px 600px at 85% 0%, rgba(201,162,74,.10), transparent 55%),
+                  var(--bg);
+      line-height:1.6;
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px; margin:0 auto; padding:28px 18px 60px}
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:10px 0 22px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      text-decoration:none;
+    }
+    .mark{
+      width:40px; height:40px; border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), #1e4c38);
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .mark:before{
+      content:"";
+      position:absolute; inset:-20px -10px auto auto;
+      width:60px; height:60px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 60%);
+      transform:rotate(15deg);
+    }
+    .brand h1{
+      margin:0;
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    nav{
+      display:flex; flex-wrap:wrap; gap:10px 14px;
+      font-size:14px;
+      color:var(--muted);
+    }
+    nav a{
+      text-decoration:none;
+      padding:6px 8px;
+      border-radius:10px;
+    }
+    nav a:hover{background: rgba(47,107,79,.08); color:var(--ink)}
+    .hero{
+      border:1px solid var(--line);
+      background: linear-gradient(135deg, rgba(47,107,79,.14), rgba(201,162,74,.10));
+      border-radius: calc(var(--radius) + 6px);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero-inner{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:0;
+      align-items:stretch;
+    }
+    .hero-copy{
+      padding:34px 26px 28px;
+    }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-size:13px;
+      color:var(--muted);
+      background: rgba(255,255,255,.65);
+      border:1px solid var(--line);
+      padding:8px 12px;
+      border-radius:999px;
+    }
+    .dot{
+      width:9px; height:9px; border-radius:99px;
+      background: var(--accent);
+      box-shadow:0 0 0 4px rgba(47,107,79,.12);
+    }
+    .hero h2{
+      margin:16px 0 10px;
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      font-size:42px;
+      line-height:1.15;
+      letter-spacing:.2px;
+    }
+    .hero p{
+      margin:0 0 18px;
+      color:var(--muted);
+      max-width:52ch;
+      font-size:16px;
+    }
+    .cta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-top:18px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.85);
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--accent), #1e4c38);
+      border: none;
+      color:white;
+      box-shadow: var(--shadow);
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .hero-side{
+      border-left: 1px solid rgba(0,0,0,.06);
+      background: rgba(255,255,255,.55);
+      padding:26px 22px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:12px;
+    }
+    .panel{
+      background: var(--card);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:16px 16px;
+      box-shadow: 0 8px 22px rgba(0,0,0,.06);
+    }
+    .panel h3{
+      margin:0 0 6px;
+      font-size:14px;
+      letter-spacing:.2px;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .panel .big{
+      font-weight:700;
+      font-size:16px;
+      margin:0 0 2px;
+    }
+    .panel .small{margin:0; color:var(--muted); font-size:14px}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+    .card{
+      background: var(--card);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px 16px;
+      box-shadow: 0 8px 22px rgba(0,0,0,.06);
+    }
+    .card h3{
+      margin:0 0 6px;
+      font-size:16px;
+    }
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .photo-strip{
+      margin-top:18px;
+      border:1px dashed rgba(47,107,79,.35);
+      border-radius: var(--radius);
+      padding:14px;
+      color:var(--muted);
+      font-size:14px;
+      background: rgba(255,255,255,.55);
+    }
+    footer{
+      margin-top:26px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:space-between;
+    }
+    .pill{
+      display:inline-flex; gap:10px; flex-wrap:wrap; align-items:center;
+    }
+    .tag{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.75);
+      padding:6px 10px;
+      border-radius:999px;
+    }
+
+    @media (max-width: 900px){
+      .hero-inner{grid-template-columns: 1fr}
+      .hero-side{border-left:none; border-top:1px solid rgba(0,0,0,.06)}
+      .hero h2{font-size:36px}
+      .grid{grid-template-columns: 1fr}
+      nav{display:none}
+    }
+  </style>
 </head>
+
 <body>
-  <h1>East Dean & Friston Gardening Club</h1>
-  <p>This is the new website.</p>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <h1>East Dean &amp; Friston Gardening Club</h1>
+          <div style="font-size:13px;color:var(--muted)">Village Hall, East Dean</div>
+        </div>
+      </a>
+
+      <nav aria-label="Primary">
+        <a href="#events">Events</a>
+        <a href="#tasks">Monthly Tasks</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#join">Join</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="kicker"><span class="dot"></span> Open to East Dean, Friston &amp; neighbouring areas</div>
+          <h2>Seasonal inspiration, local knowledge, good company.</h2>
+          <p>
+            Talks, outings, practical tips and a friendly community of gardeners — from pots and patios to borders, veg plots and wildlife spaces.
+          </p>
+
+          <div class="cta">
+            <a class="btn primary" href="#events">See upcoming events</a>
+            <a class="btn" href="#join">Membership: £10 / Visitors: £4</a>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <h3>Monthly talks</h3>
+              <p>Guest speakers and seasonal themes you can use in your own garden.</p>
+            </div>
+            <div class="card">
+              <h3>Outings &amp; special events</h3>
+              <p>Coach trips, garden visits and socials through the year.</p>
+            </div>
+            <div class="card">
+              <h3>All experience levels</h3>
+              <p>New to gardening or decades in — you’ll fit right in.</p>
+            </div>
+          </div>
+
+          <div class="photo-strip" id="gallery">
+            <strong>Photos coming soon.</strong> We’ll add a gallery strip here (events, gardens, seasonal highlights).
+          </div>
+        </div>
+
+        <aside class="hero-side">
+          <div class="panel" id="events">
+            <h3>Next event</h3>
+            <p class="big">To be announced</p>
+            <p class="small">We’ll list your programme here as you add events.</p>
+          </div>
+
+          <div class="panel" id="tasks">
+            <h3>This month</h3>
+            <p class="big">Monthly garden tasks</p>
+            <p class="small">A tidy checklist of “to do this month” will live here.</p>
+          </div>
+
+          <div class="panel" id="join">
+            <h3>Join</h3>
+            <p class="big">£10 annual membership</p>
+            <p class="small">Visitors welcome: £4. Come along or get in touch.</p>
+          </div>
+
+          <div class="panel" id="contact">
+            <h3>Contact</h3>
+            <p class="big"><a href="mailto:Paul_richards@me.com">Email Paul</a></p>
+            <p class="small">We’ll add a contact form next.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div class="pill">
+        <span class="tag">Village Hall, East Dean</span>
+        <span class="tag">Membership £10</span>
+        <span class="tag">Visitors £4</span>
+      </div>
+      <div>© <span id="y"></span> East Dean &amp; Friston Gardening Club</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
