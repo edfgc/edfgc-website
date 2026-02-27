@@ -1,1 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Programme & Events | East Dean & Friston Gardening Club</title>
+  <meta name="description" content="Programme and events for East Dean & Friston Gardening Club: talks, outings, and special events." />
 
+  <style>
+    :root{
+      --ink:#1b1f1c;
+      --muted:#5a645f;
+      --bg:#fbfaf7;
+      --card:#ffffff;
+      --line:#e7e3da;
+      --accent:#2f6b4f;
+      --accent-2:#c9a24a;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--ink);
+      background: radial-gradient(1200px 700px at 15% 10%, rgba(47,107,79,.12), transparent 60%),
+                  radial-gradient(900px 600px at 85% 0%, rgba(201,162,74,.10), transparent 55%),
+                  var(--bg);
+      line-height:1.6;
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px; margin:0 auto; padding:28px 18px 60px}
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:10px 0 22px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      text-decoration:none;
+    }
+    .mark{
+      width:40px; height:40px; border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), #1e4c38);
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .mark:before{
+      content:"";
+      position:absolute; inset:-20px -10px auto auto;
+      width:60px; height:60px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 60%);
+      transform:rotate(15deg);
+    }
+    .brand h1{
+      margin:0;
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    nav{
+      display:flex; flex-wrap:wrap; gap:10px 14px;
+      font-size:14px;
+      color:var(--muted);
+    }
+    nav a{
+      text-decoration:none;
+      padding:6px 8px;
+      border-radius:10px;
+    }
+    nav a:hover{background: rgba(47,107,79,.08); color:var(--ink)}
+    nav a.active{
+      background: rgba(47,107,79,.12);
+      color:var(--ink);
+      font-weight:600;
+    }
+
+    .page-head{
+      display:flex;
+      gap:14px;
+      align-items:flex-end;
+      justify-content:space-between;
+      margin:10px 0 10px;
+    }
+    .page-head h2{
+      margin:0;
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      font-size:34px;
+      line-height:1.15;
+    }
+    .page-head p{
+      margin:6px 0 0;
+      color:var(--muted);
+      max-width:70ch;
+    }
+
+    .pillbar{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin:10px 0 18px;
+    }
+    .pill{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.75);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:14px;
+      align-items:start;
+    }
+
+    .card{
+      background: var(--card);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px 16px;
+      box-shadow: 0 8px 22px rgba(0,0,0,.06);
+    }
+
+    h3.section{
+      margin:0 0 10px;
+      font-size:14px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+
+    .event{
+      display:grid;
+      grid-template-columns: 130px 1fr;
+      gap:14px;
+      padding:14px 0;
+      border-top:1px solid var(--line);
+    }
+    .event:first-child{border-top:none; padding-top:0}
+    .datebox{
+      border:1px solid var(--line);
+      background: rgba(47,107,79,.06);
+      border-radius:14px;
+      padding:10px 12px;
+      text-align:left;
+    }
+    .datebox .month{
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin:0;
+    }
+    .datebox .day{
+      font-size:26px;
+      font-weight:800;
+      margin:2px 0 0;
+    }
+    .datebox .time{
+      margin:4px 0 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .event h4{margin:0 0 6px; font-size:17px}
+    .meta{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin:8px 0 8px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .tag{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.75);
+      padding:5px 10px;
+      border-radius:999px;
+    }
+    .event p{margin:0; color:var(--muted); font-size:14px}
+
+    .note{
+      color:var(--muted);
+      font-size:14px;
+      margin:0;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.85);
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--accent), #1e4c38);
+      border: none;
+      color:white;
+      box-shadow: var(--shadow);
+    }
+
+    footer{
+      margin-top:26px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:space-between;
+    }
+
+    @media (max-width: 900px){
+      nav{display:none}
+      .grid{grid-template-columns: 1fr}
+      .event{grid-template-columns: 1fr}
+      .datebox{display:flex; gap:12px; align-items:baseline}
+      .datebox .day{font-size:22px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="index.html">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <h1>East Dean &amp; Friston Gardening Club</h1>
+          <div style="font-size:13px;color:var(--muted)">Village Hall, East Dean</div>
+        </div>
+      </a>
+
+      <nav aria-label="Primary">
+        <a class="active" href="events.html">Events</a>
+        <a href="monthly-tasks.html">Monthly Tasks</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="join.html">Join</a>
+        <a href="committee.html">Committee</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <div class="page-head">
+      <div>
+        <h2>Programme 2026</h2>
+        <p>Monthly meetings and special events. Visitors are welcome.</p>
+      </div>
+      <a class="btn primary" href="contact.html">Ask a question</a>
+    </div>
+
+    <div class="pillbar">
+      <span class="pill">Village Hall, East Dean</span>
+      <span class="pill">Membership £10</span>
+      <span class="pill">Visitors £4</span>
+    </div>
+
+    <div class="grid">
+      <main class="card">
+        <h3 class="section">Monthly talks 2026</h3>
+
+        <!-- JAN -->
+        <div class="event">
+          <div class="datebox">
+            <p class="month">Jan</p>
+            <p class="day">13</p>
+            <p class="time">Evening</p>
+          </div>
+          <div>
+            <h4>Leonore Corney Memorial Talk — Creating a lush foliage garden</h4>
+            <div class="meta">
+              <span class="tag">Talk</span>
+              <span class="tag">Philip Oostenbrink</span>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+        <!-- FEB -->
+        <div class="event">
+          <div class="datebox">
+            <p class="month">Feb</p>
+            <p class="day">10</p>
+            <p class="time">Evening</p>
+          </div>
+          <div>
+            <h4>Succulent obsession</h4>
+            <div class="meta">
+              <span class="tag">Talk</span>
+              <span class="tag">Geoff Stonebanks</span>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+        <!-- MAR -->
+        <div class="event">
+          <div class="datebox">
+            <p class="month">Mar</p>
+            <p class="day">10</p>
+            <p class="time">Evening</p>
+          </div>
+          <div>
+            <h4>AGM followed by film — Film on ponds</h4>
+            <div class="meta">
+              <span class="tag">AGM</span>
+              <span class="tag">Film</span>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+        <!-- APR -->
+        <div class="event">
+          <div class="datebox">
+            <p class="month">Apr</p>
+            <p class="day">14</p>
+            <p class="time">Evening</p>
+          </div>
+          <div>
+            <h4>Secret gardens of Sussex</h4>
+            <div class="meta">
+              <span class="tag">Talk</span>
+              <span class="tag">Irene Wilson</span>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+        <!-- MAY -->
+        <div class="event">
+          <div class="datebox">
+            <p class="month">May</p>
+            <p class="day">12</p>
+            <p class="time">Evening</p>
+          </div>
+          <div>
+            <h4>I am a Tulip, what are you?</h4>
+            <div class="meta">
+              <span class="tag">Talk</span>
+              <span class="tag">Jacqueline Aviolet</span>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+        <!-- JUN -->
+        <div class="event">
+          <div class="datebox">
+            <p class="month">Jun</p>
+            <p class="day">9</p>
+            <p class="time">Evening</p>
+          </div>
+          <div>
+            <h4>The Peonies of Highdown Gardens</h4>
+            <div class="meta">
+              <span class="tag">Talk</span>
+              <span class="tag">Alex New</span>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+        <!-- JUL -->
+        <div class="event">
+          <div class="datebox">
+            <p class="month">Jul</p>
+            <p class="day">14</p>
+            <p class="time">Evening</p>
+          </div>
+          <div>
+            <h4>Meadow and Prairie planting</h4>
+            <div class="meta">
+              <span class="tag">Talk</span>
+              <span class="tag">Alison Marsden</span>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+        <!-- AUG (NO MEETING) -->
+        <div class="event">
+          <div class="datebox">
+            <p class="month">Aug</p>
+            <p class="day">—</p>
+            <p class="time">—</p>
+          </div>
+          <div>
+            <h4>No meeting</h4>
+            <div class="meta">
+              <span class="tag">Summer break</span>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+        <!-- SEP -->
+        <div class="event">
+          <div class="datebox">
+            <p class="month">Sep</p>
+            <p class="day">8</p>
+            <p class="time">Evening</p>
+          </div>
+          <div>
+            <h4>Japanese gardens of Kyoto</h4>
+            <div class="meta">
+              <span class="tag">Talk</span>
+              <span class="tag">Melissa Hay</span>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+        <!-- OCT -->
+        <div class="event">
+          <div class="datebox">
+            <p class="month">Oct</p>
+            <p class="day">13</p>
+            <p class="time">Evening</p>
+          </div>
+          <div>
+            <h4>Secret history of vegetables</h4>
+            <div class="meta">
+              <span class="tag">Talk</span>
+              <span class="tag">Martyn Cox</span>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+        <!-- NOV -->
+        <div class="event">
+          <div class="datebox">
+            <p class="month">Nov</p>
+            <p class="day">10</p>
+            <p class="time">Evening</p>
+          </div>
+          <div>
+            <h4>Lessons from Great Dixter</h4>
+            <div class="meta">
+              <span class="tag">Talk</span>
+              <span class="tag">Edward Flint</span>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+        <hr style="border:none;border-top:1px solid var(--line); margin:18px 0;">
+
+        <h3 class="section">Special events</h3>
+
+        <!-- DEC -->
+        <div class="event">
+          <div class="datebox">
+            <p class="month">Dec</p>
+            <p class="day">8</p>
+            <p class="time">Afternoon</p>
+          </div>
+          <div>
+            <h4>Christmas Tea</h4>
+            <div class="meta">
+              <span class="tag">Social</span>
+              <span class="tag">Seasonal</span>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="datebox">
+            <p class="month">May/Jun</p>
+            <p class="day">TBA</p>
+            <p class="time">Daytime</p>
+          </div>
+          <div>
+            <h4>Annual Plant Fair (date to be confirmed)</h4>
+            <div class="meta">
+              <span class="tag">Plant Fair</span>
+              <span class="tag">Special event</span>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="datebox">
+            <p class="month">TBA</p>
+            <p class="day">—</p>
+            <p class="time">Day trip</p>
+          </div>
+          <div>
+            <h4>Coach trip / outing (details to be confirmed)</h4>
+            <div class="meta">
+              <span class="tag">Outing</span>
+              <span class="tag">Special event</span>
+            </div>
+            <p></p>
+          </div>
+        </div>
+      </main>
+
+      <aside class="card">
+        <h3 style="margin:0 0 10px">Notes</h3>
+        <p class="note">
+          Meetings are typically held at the <strong>Village Hall, East Dean</strong>.
+          Membership is <strong>£10</strong> per year; visitors <strong>£4</strong>.
+        </p>
+
+        <p class="note" style="margin-top:12px">
+          If you’d like, we can add meeting start time and doors-open time once confirmed.
+        </p>
+
+        <div style="margin-top:14px; display:flex; flex-wrap:wrap; gap:10px;">
+          <a class="btn" href="monthly-tasks.html">Monthly tasks</a>
+          <a class="btn" href="join.html">How to join</a>
+          <a class="btn" href="contact.html">Contact</a>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div>© <span id="y"></span> East Dean &amp; Friston Gardening Club</div>
+      <div><a href="privacy.html">Privacy</a></div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
