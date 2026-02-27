@@ -1,0 +1,86 @@
+[
+  {
+    "date": "2026-01-13",
+    "title": "Leonore Corney Memorial Talk",
+    "topic": "Creating a lush foliage garden",
+    "speaker": "Philip Oostenbrink",
+    "icon": "leaf"
+  },
+  {
+    "date": "2026-02-10",
+    "title": "Monthly Meeting",
+    "topic": "Succulent obsession",
+    "speaker": "Geoff Stonebanks",
+    "icon": "cactus"
+  },
+  {
+    "date": "2026-03-10",
+    "title": "AGM followed by film",
+    "topic": "Film on ponds",
+    "speaker": "",
+    "icon": "water"
+  },
+  {
+    "date": "2026-04-14",
+    "title": "Monthly Meeting",
+    "topic": "Secret gardens of Sussex",
+    "speaker": "Irene Wilson",
+    "icon": "gate"
+  },
+  {
+    "date": "2026-05-12",
+    "title": "Monthly Meeting",
+    "topic": "I am a Tulip, what are you?",
+    "speaker": "Jacqueline Aviolet",
+    "icon": "tulip"
+  },
+  {
+    "date": "2026-06-14",
+    "title": "Monthly Meeting",
+    "topic": "The Peonies of Highdown Gardens",
+    "speaker": "Alex New",
+    "icon": "peony"
+  },
+  {
+    "date": "2026-07-14",
+    "title": "Monthly Meeting",
+    "topic": "Meadow and Prairie planting",
+    "speaker": "Alison Marsden",
+    "icon": "meadow"
+  },
+  {
+    "date": "2026-08-01",
+    "title": "No meeting",
+    "topic": "",
+    "speaker": "",
+    "icon": "calendar"
+  },
+  {
+    "date": "2026-09-08",
+    "title": "Monthly Meeting",
+    "topic": "Japanese gardens of Kyoto",
+    "speaker": "Melissa Hay",
+    "icon": "zen"
+  },
+  {
+    "date": "2026-10-13",
+    "title": "Monthly Meeting",
+    "topic": "Secret history of vegetables",
+    "speaker": "Martyn Cox",
+    "icon": "carrot"
+  },
+  {
+    "date": "2026-11-10",
+    "title": "Monthly Meeting",
+    "topic": "Lessons from Great Dixter",
+    "speaker": "Edward Flint",
+    "icon": "topiary"
+  },
+  {
+    "date": "2026-12-08",
+    "title": "Christmas Tea",
+    "topic": "",
+    "speaker": "",
+    "icon": "tea"
+  }
+]
