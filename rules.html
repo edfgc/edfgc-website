@@ -1,104 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Club Rules | East Dean & Friston Gardening Club</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gardening Club Rules · East Dean &amp; Friston Gardening Club</title>
   <link rel="stylesheet" href="styles.css">
-</head>
 
+  <!-- Rules-page-only tweaks (keeps Style A look, improves readability) -->
+  <style>
+    .rules-wrap{max-width:900px; margin:0 auto}
+    .rules-card{padding:22px 22px}
+    .rule{padding:16px 0; border-top:1px solid rgba(15,23,42,.08)}
+    .rule:first-child{border-top:none; padding-top:0}
+    .rhead{display:flex; gap:12px; align-items:flex-start}
+    .rnum{
+      min-width:44px;
+      height:44px;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(22,163,74,.10);
+      border:1px solid rgba(22,163,74,.20);
+      color:var(--green-2);
+      font-weight:900;
+    }
+    .rbody p{margin:0; color:var(--muted); line-height:1.65; font-size:16px}
+    .rbody p + p{margin-top:10px}
+    .subpoints{margin-top:10px}
+    .subpoints p{margin:0 0 10px; color:var(--muted); font-size:16px; line-height:1.65}
+    .subpoints p:last-child{margin-bottom:0}
+    .docref{margin-top:18px; padding-top:16px; border-top:1px solid rgba(15,23,42,.08); color:var(--muted); font-size:14px}
+    .actions{margin-top:18px; display:flex; justify-content:center}
+  </style>
+</head>
 <body>
 
-<header class="site-header">
+<div class="topbar">
   <div class="container">
-    <h1>East Dean & Friston Gardening Club</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="events.html">Events</a>
-      <a href="join.html">Join</a>
-      <a href="rules.html" class="active">Rules</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero small-hero">
-  <div class="container">
-    <h2>Club Rules</h2>
-    <p>As amended at the EGM held on June 10th 2025</p>
-  </div>
-</section>
-
-<main class="container" style="padding:60px 20px;">
-
-  <div class="card" style="max-width:900px; margin:0 auto; line-height:1.75;">
-
-    <h3>1.</h3>
-    <p>The NAME of the Club will be the “East Dean and Friston Gardening Club" (hereinafter called the "Club").</p>
-
-    <h3>2.</h3>
-    <p>The OBJECT of the Club will be to promote the good cultivation of gardens by organising lectures, discussions, demonstrations and visits.</p>
-
-    <h3>3.</h3>
-    <p>MEMBERSHIP of the Club will be open to residents local to East Dean and Friston. The COMMITTEE shall have the right to terminate the membership of, or refuse membership to anyone whose presence or behaviour they consider would be upsetting or detrimental to the general enjoyment of the majority of members at Club Events.</p>
-
-    <h3>4.</h3>
-    <p>The business of the Club will be conducted by a COMMITTEE consisting of four Officers — Chairman, Treasurer, Secretary, Membership Secretary — and other elected Ordinary Members. The Committee may create other Officers as deemed necessary.</p>
-
-    <h3>5.</h3>
-    <p>ELECTION of the Committee will proceed as follows:</p>
-    <p>(a) Every JANUARY the CHAIRMAN will invite nominations from the Club membership for each Officer and Ordinary Member post. Nominations must specify for each candidate the post in which he or she is willing to serve and be presented in writing to the SECRETARY before the Agenda is circulated.</p>
-    <p>(b) If more than one candidate is nominated for any one post a show of hands election will be held, and the winner be the one with the most votes from those present and voting.</p>
-    <p>(c) Where only one candidate is nominated for any one post the Chairman will declare that candidate be elected unopposed.</p>
-    <p>(d) The elected Committee members will hold office until the next Annual General Meeting. They will then retire but be eligible for re-election.</p>
-
-    <h3>6.</h3>
-    <p>A QUORUM for a COMMITTEE MEETING will consist of 5 Committee members. In the event of equality of votes the Chairman of any meeting will have a second or casting vote.</p>
-
-    <h3>7.</h3>
-    <p>The Committee will have the power to fill, by co-option if necessary, any VACANCIES that may arise during the year.</p>
-
-    <h3>8.</h3>
-    <p>An ANNUAL GENERAL MEETING of the Club will be held in March each year.</p>
-
-    <h3>9.</h3>
-    <p>The Committee may convene an EXTRAORDINARY GENERAL MEETING of the Club at any time.</p>
-
-    <h3>10.</h3>
-    <p>In the ABSENCE of the CHAIRMAN at any General Meeting the chair will be taken by a member of the COMMITTEE.</p>
-
-    <h3>11.</h3>
-    <p>The COMMITTEE is responsible for setting the ANNUAL SUBSCRIPTION, currently £10.00 (from 2026), and the VISITORS CHARGE, currently £4 per person per meeting.</p>
-
-    <h3>12.</h3>
-    <p>All subscriptions and other monies will be passed to the TREASURER who will be responsible for the CLUB’S FUNDS.</p>
-
-    <h3>13.</h3>
-    <p><strong>CLUB RESPONSIBILITIES.</strong> The Club will take over any personal responsibility for unforeseen issues arising when activities have been arranged by individual members with external agencies on behalf of the Club and with the approval of the COMMITTEE.</p>
-
-    <h3>14.</h3>
-    <p><strong>DISSOLUTION.</strong> If at a General meeting a resolution for dissolution of the Club is passed by a majority of at least two thirds of the members present and voting, the COMMITTEE shall realise any property of the Club and discharge all debts.</p>
-
-    <h3>15.</h3>
-    <p>These RULES may be AMENDED only at a General Meeting of the Club and only if notice of the proposed deletion or addition has been sent to all members not less than 21 days before the meeting.</p>
-
-    <div style="margin-top:60px; padding-top:30px; border-top:1px solid #ddd;">
-      <a href="mailto:edf.gctreasurer@btinternet.com" class="button">
-        Contact the Treasurer
+    <div class="nav">
+      <a class="brand" href="index.html" aria-label="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+          <path d="M50 14C32 16 18 28 16 46c10 2 20-1 27-8 7-7 9-15 7-24z" stroke="#16a34a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 46c10-12 21-21 34-27" stroke="#16a34a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div>
+          <div class="name">East Dean &amp; Friston<br/>Gardening Club</div>
+          <span class="sub">Gardening Club</span>
+        </div>
       </a>
+      <div class="menu" aria-label="Primary navigation">
+        <a class="" href="events.html">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M8 7V3m8 4V3M4 11h16M6 7h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Gardening Club Diary
+        </a>
+        <a class="" href="whats-on.html">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          What's on this month
+        </a>
+        <a class="" href="tasks.html">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Gardening Tasks for this month
+        </a>
+        <a class="active" href="rules.html">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M20 22V4a2 2 0 0 0-2-2H6.5A2.5 2.5 0 0 0 4 4.5v15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 6h8M8 10h8M8 14h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Gardening Club Rules
+        </a>
+        <a class="" href="join.html">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 8v6M23 11h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Join the Club
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section white">
+  <div class="container">
+    <h2>Gardening Club Rules</h2>
+    <p class="lead" style="text-align:center">EASTDEAN AND FRISTON GARDENING CLUB RULES<br>As amended at the EGM held on June 10th 2025</p>
+
+    <div class="rules-wrap">
+      <div class="card rules-card">
+
+        <div class="rule">
+          <div class="rhead">
+            <div class="rnum">1</div>
+            <div class="rbody">
+              <p>The NAME of the Club will be the “East Dean and Friston Gardening Club" (hereinafter called the "Club").</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rhead">
+            <div class="rnum">2</div>
+            <div class="rbody">
+              <p>The OBJECT of the Club will be to promote the good cultivation of gardens by organising lectures, discussions, demonstrations and visits.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rhead">
+            <div class="rnum">3</div>
+            <div class="rbody">
+              <p>MEMBERSHIP of the Club will be open to residents local to East Dean and Friston. The COMMITTEE shall have the right to terminate the membership of, or refuse membership to anyone whose presence or behaviour they consider would be upsetting or detrimental to the general enjoyment of the majority of members at Club Events.”</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rhead">
+            <div class="rnum">4</div>
+            <div class="rbody">
+              <p>The business of the Club will be conducted by a COMMITTEE consisting of four Officers -- Chairman, Treasurer, Secretary, Membership Secretary – and other elected Ordinary Members. The Committee may create other Officers as deemed necessary.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rhead">
+            <div class="rnum">5</div>
+            <div class="rbody">
+              <p>ELECTION of the Committee will proceed as follows:</p>
+              <div class="subpoints">
+                <p>( a ) Every JANUARY the CHAIRMAN will invite nominations from the Club membership for each Officer and Ordinary Member post. Nominations must specify for each candidate the post in which he or she is willing to serve and be presented in writing to the SECRETARY before the Agenda is circulated.</p>
+                <p>( b ) If more than one candidate is nominated for any one post a show of hands election will be held, and the winner be the one with the most votes from those present and voting.</p>
+                <p>( c ) Where only one candidate is nominated for any one post the Chairman will declare that candidate be elected unopposed.</p>
+                <p>( d ) The elected Committee members will hold office until the next Annual General Meeting. They will then retire but be eligible for re-election.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rhead">
+            <div class="rnum">6</div>
+            <div class="rbody">
+              <p>A QUORUM for a COMMITTEE MEETING will consist of 5 Committee members. In the event of equality of votes the Chairman of any meeting will have a second or casting vote.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rhead">
+            <div class="rnum">7</div>
+            <div class="rbody">
+              <p>The Committee will have the power to fill, by co-option if necessary, any VACANCIES that may arise during the year.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rhead">
+            <div class="rnum">8</div>
+            <div class="rbody">
+              <p>An ANNUAL GENERAL MEETING of the Club will be held in March each year. The agenda will be circulated not less than three weeks beforehand and include:</p>
+              <div class="subpoints">
+                <p>( a ) A REPORT by the CHAIRMAN on the work of the Club during the preceding year and on plans for the future. To be enclosed with the agenda and presented at the meeting.</p>
+                <p>( b ) A FINANCIAL STATEMENT and BALANCE SHEET prepared as at the 31st December each year and signed by the INDEPENDENT EXAMINER. To be enclosed as for 8(a).</p>
+                <p>( c ) An ANNOUNCEMENT of the future ANNUAL SUBSCRIPTION rate and VISITORS  CHARGE.</p>
+                <p>( d ) ELECTION of a COMMITTEE (see Rule 5).</p>
+                <p>( e ) APPOINTMENT of an INDEPENDENT EXAMINER, who must not be a member of the COMMITTEE.</p>
+                <p>( f ) ANY OTHER BUSINESS.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rhead">
+            <div class="rnum">9</div>
+            <div class="rbody">
+              <p>The Committee may convene an EXTRAORDINARY GENERAL MEETING of the Club at any time. Such a meeting must be also convened within four weeks if a written request, signed by at least ten members, is presented to the Committee. A written notice of the meeting must be sent to all members at least seven days in advance setting forth the time: place and purpose of the meeting. Only business defined in the notice will be transacted.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rhead">
+            <div class="rnum">10</div>
+            <div class="rbody">
+              <p>In the ABSENCE of the CHAIRMAN at any General Meeting the chair will be taken by a member of the COMMITTEE.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rhead">
+            <div class="rnum">11</div>
+            <div class="rbody">
+              <p>The COMMITTEE is responsible for setting the ANNUAL SUBSCRIPTION, currently £10.00 (from 2026), and the VISITORS CHARGE, currently £4 per person per meeting. Any changes can only be made at a General Meeting. The SUBSCRIPTION is due in January each year. Any member who has not renewed by the date of the following AGM will be deemed to have lapsed and will need to re-apply for membership.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rhead">
+            <div class="rnum">12</div>
+            <div class="rbody">
+              <p>All subscriptions and other monies will be passed to the TREASURER who will be responsible for the CLUB’S FUNDS and for keeping ACCOUNTS thereof. The Club’s FINANCIAL YEAR shall run from JANUARY to DECEMBER. All sums received by the TREASURER on the Club's behalf will be paid into the Club's BANKING ACCOUNT and all CHEQUES drawn on that account must be signed by any two authorised COMMITTEE MEMBERS as set out on the current BANK MANDATE. The funds of the Club will be used for furthering the Club's objectives or in ways approved by the COMMITTEE or by a General Meeting.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rhead">
+            <div class="rnum">13</div>
+            <div class="rbody">
+              <p><strong>CLUB RESPONSIBILITIES.</strong> The Club will take over any personal responsibility for unforeseen issues arising when activities have been arranged by individual members with external agencies on behalf of the Club and with the approval of the COMMITTEE.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rhead">
+            <div class="rnum">14</div>
+            <div class="rbody">
+              <p><strong>DISSOLUTION.</strong> If at a General meeting a resolution for dissolution of the Club is passed by a majority of at least two thirds of the members present and voting, the COMMITTEE shall realise any property of the Club and discharge all debts. The remaining assets will be donated to any gardening-related or locally based charitable organisation as decided by the COMMITTEE, after which the Club will be dissolved.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule">
+          <div class="rhead">
+            <div class="rnum">15</div>
+            <div class="rbody">
+              <p>These RULES may be AMENDED only at a General Meeting of the Club and only if notice of the proposed deletion or addition has been sent to all members not less than 21 days before the meeting.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="docref">
+          <strong>AS/EDFGCRules100625</strong>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="mailto:edf.gctreasurer@btinternet.com">Contact the Treasurer</a>
+        </div>
+
+      </div>
     </div>
 
   </div>
+</section>
 
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <p>© <span id="year"></span> East Dean & Friston Gardening Club</p>
-  </div>
-</footer>
+<div class="footer">
+  <div class="container">© East Dean &amp; Friston Gardening Club · Built as a simple static site</div>
+</div>
 
 <script src="site.js"></script>
-
 </body>
 </html>
