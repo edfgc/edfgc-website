@@ -13,9 +13,9 @@
     <div class="nav">
       <a class="brand" href="index.html" aria-label="Home">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <path d="M50 14C32 16 18 28 16 46c10 2 20-1 27-8 7-7 9-15 7-24z" stroke="#16a34a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M16 46c10-12 21-21 34-27" stroke="#16a34a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+          <path d="M50 14C32 16 18 28 16 46c10 2 20-1 27-8 7-7 9-15 7-24z" stroke="#16a34a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 46c10-12 21-21 34-27" stroke="#16a34a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         <div>
           <div class="name">East Dean &amp; Friston<br/>Gardening Club</div>
           <span class="sub">Gardening Club</span>
@@ -32,18 +32,37 @@
   </div>
 </div>
 
-
 <section class="section white">
   <div class="container">
     <h2>Gardening Tasks for this month</h2>
-    <p class="lead" style="text-align:center">This page will contain your monthly gardening tasks (with your clipart icons).</p>
-    <div class="callout">Tell me what you want on this page and I’ll fill it in.</div>
+    <p class="lead" style="text-align:center">Opening this month’s PDF…</p>
+    <div class="callout">If it doesn’t open automatically, use <a id="fallbackLink" href="assets/tasks/january.pdf">January tasks</a>.</div>
   </div>
 </section>
 
 <div class="footer">
   <div class="container">© East Dean &amp; Friston Gardening Club · Built as a simple static site</div>
 </div>
+
+<script>
+  const months = [
+    "january","february","march","april","may","june",
+    "july","august","september","october","november","december"
+  ];
+  const m = months[new Date().getMonth()];
+  const url = "assets/tasks/" + m + ".pdf";
+
+  // Update fallback link text + target
+  const fb = document.getElementById("fallbackLink");
+  fb.href = url;
+  fb.textContent = m.charAt(0).toUpperCase() + m.slice(1) + " tasks";
+
+  // Redirect if the PDF exists; otherwise stay on page and link to January.
+  fetch(url, { method: "HEAD" })
+    .then(r => { if (r.ok) window.location.href = url; })
+    .catch(() => {});
+</script>
+
 <script src="site.js"></script>
 </body>
 </html>
