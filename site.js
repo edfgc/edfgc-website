@@ -45,3 +45,19 @@ function escapeHtml(str){
 }
 
 document.addEventListener('DOMContentLoaded', loadCards);
+// Auto-link "Gardening Tasks for this month" to current month's PDF
+document.addEventListener('DOMContentLoaded', function () {
+  const link = document.getElementById('navMonthlyTasks');
+  if (!link) return;
+
+  const monthNames = [
+    "january","february","march","april","may","june",
+    "july","august","september","october","november","december"
+  ];
+
+  const now = new Date();
+  const month = monthNames[now.getMonth()];
+  const year = now.getFullYear();
+
+  link.href = `assets/tasks/${month}-${year}.pdf`;
+});
