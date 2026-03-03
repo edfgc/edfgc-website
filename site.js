@@ -59,5 +59,5 @@ document.addEventListener('DOMContentLoaded', function () {
   const month = monthNames[now.getMonth()];
   const year = now.getFullYear();
 
-  link.href = `assets/tasks/${month}-${year}.pdf`;
+ link.href = `assets/tasks/${month}.pdf`;
 });
