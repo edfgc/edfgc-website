@@ -147,11 +147,22 @@ font-size:14px;
 }
 .task-grid{
   display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  gap:14px;
-  margin-top:25px;
+  grid-template-columns: repeat(4,1fr);
+  gap:18px;
+  margin-top:30px;
+  margin-bottom:10px;
+}
+@media (max-width: 900px){
+  .task-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
 }
 
+@media (max-width: 500px){
+  .task-grid{
+    grid-template-columns: 1fr;
+  }
+}
 .task-grid a{
   display:block;
   text-align:center;
