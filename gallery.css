@@ -42,9 +42,7 @@
   visibility:hidden;
   pointer-events:none;
 
-  transition:
-    opacity 1s ease,
-    visibility 0s linear 1s;
+    transition: opacity 1s ease;
 }
 
 .lightbox.open{
