@@ -61,17 +61,21 @@
 </div>
 
 <script>
-const months = [
-  "january","february","march","april","may","june",
-  "july","august","september","october","november","december"
-];
+document.addEventListener("DOMContentLoaded", () => {
+  const months = [
+    "january","february","march","april","may","june",
+    "july","august","september","october","november","december"
+  ];
 
-const current = months[new Date().getMonth()];
+  const current = months[new Date().getMonth()];
+  const wanted = `assets/tasks/${current}.pdf`;
 
-document.querySelectorAll(".task-grid a").forEach(link => {
-  if(link.href.toLowerCase().includes(current + ".pdf")){
-    link.classList.add("current-month");
-  }
+  document.querySelectorAll(".task-grid a").forEach(a => {
+    const hrefAttr = (a.getAttribute("href") || "").toLowerCase().trim();
+    if (hrefAttr === wanted) {
+      a.classList.add("current-month");
+    }
+  });
 });
 </script>
 
