@@ -145,3 +145,27 @@ font-size:14px;
 .section h2{font-size:34px}
 .menu{gap:10px}
 }
+.task-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+  gap:14px;
+  margin-top:25px;
+}
+
+.task-grid a{
+  display:block;
+  text-align:center;
+  padding:14px;
+  border-radius:10px;
+  background:#f0fdf4;
+  border:1px solid #bbf7d0;
+  font-weight:600;
+  text-decoration:none;
+  color:#065f46;
+  transition:.15s;
+}
+
+.task-grid a:hover{
+  background:#dcfce7;
+  transform:translateY(-2px);
+}
