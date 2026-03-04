@@ -60,4 +60,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const year = now.getFullYear();
 
  link.href = `assets/tasks/${month}.pdf`;
+
+link.innerHTML = link.innerHTML.replace(
+  "Gardening Tasks for this month",
+  "Gardening Tasks for " + month.charAt(0).toUpperCase() + month.slice(1)
+);
+
 });
