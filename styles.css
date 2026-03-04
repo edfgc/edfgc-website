@@ -249,17 +249,15 @@ font-size:14px;
 
 .lightbox .close{
   position:absolute;
-  top:14px;
-  right:14px;
-  width:42px;
-  height:42px;
-  border-radius:999px;
-  background: rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.25);
-  color:#fff;
-  font-size:22px;
-  line-height:42px;
-  text-align:center;
+  top:18px;
+  right:18px;
+  padding:8px 14px;
+  border-radius:8px;
+  background:rgba(255,255,255,.92);
+  border:1px solid rgba(0,0,0,.15);
+  color:#111;
+  font-size:14px;
+  font-weight:600;
   cursor:pointer;
-  user-select:none;
+  box-shadow:0 6px 14px rgba(0,0,0,.15);
 }
