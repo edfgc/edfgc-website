@@ -33,11 +33,16 @@
   opacity:0;
   visibility:hidden;
   pointer-events:none;
-  transition: opacity .35s ease;
+  transition:
+    opacity 1s ease,
+    visibility 0s linear 1s;
 }
 
 .lightbox.open{
   opacity:1;
   visibility:visible;
   pointer-events:auto;
+  transition:
+    opacity 1s ease,
+    visibility 0s;
 }
