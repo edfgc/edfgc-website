@@ -85,5 +85,44 @@
   <div class="close" id="lightboxClose" aria-label="Close">×</div>
   <img id="lightboxImg" alt="">
 </div>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const lb = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lightboxImg");
+  const lbClose = document.getElementById("lightboxClose");
+
+  function openLightbox(src, alt){
+    lbImg.src = src;
+    lbImg.alt = alt || "";
+    lb.classList.add("open");
+    lb.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox(){
+    lb.classList.remove("open");
+    lb.setAttribute("aria-hidden", "true");
+    lbImg.src = "";
+    document.body.style.overflow = "";
+  }
+
+  // Click any gallery image to open
+  document.querySelectorAll(".gallery-grid img").forEach(img => {
+    img.addEventListener("click", () => openLightbox(img.src, img.alt));
+  });
+
+  // Close on overlay click (but not when clicking the image)
+  lb.addEventListener("click", (e) => {
+    if (e.target === lb) closeLightbox();
+  });
+
+  lbClose.addEventListener("click", closeLightbox);
+
+  // Close on ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeLightbox();
+  });
+});
+</script>
 </body>
 </html>
