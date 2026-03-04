@@ -50,9 +50,7 @@
   visibility:visible;
   pointer-events:auto;
 
-  transition:
-    opacity 1s ease,
-    visibility 0s;
+  transition: opacity 1s ease;
 }
 
 .lightbox img{
