@@ -17,3 +17,13 @@
 .gallery-grid img:hover{
   transform: scale(1.02);
 }
+.gallery-grid figure{
+  margin:0;
+}
+
+.gallery-grid figcaption{
+  text-align:center;
+  font-size:0.9rem;
+  color:#64748b;
+  margin-top:6px;
+}
