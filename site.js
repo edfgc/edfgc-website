@@ -13,7 +13,7 @@ async function loadCards(){
   };
 
   grid.innerHTML = show.map(ev => {
-    const icon = `assets/icons/${ev.icon}.svg`;
+    const icon = `assets/icons/${ev.icon}.svg?v=2`;
     const title = ev.topic || ev.title;
     const date = fmt(ev.date);
     const sub = ev.topic ? ev.title : '';
