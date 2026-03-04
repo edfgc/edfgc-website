@@ -75,7 +75,20 @@
 
  
 </script>
+<script>
+const months = [
+  "january","february","march","april","may","june",
+  "july","august","september","october","november","december"
+];
 
+const current = months[new Date().getMonth()];
+
+document.querySelectorAll(".task-grid a").forEach(link => {
+  if(link.href.toLowerCase().includes(current)){
+    link.classList.add("current-month");
+  }
+});
+</script>
 <script src="site.js"></script>
 </body>
 </html>
