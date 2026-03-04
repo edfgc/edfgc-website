@@ -181,3 +181,8 @@ font-size:14px;
   transform:translateY(-2px);
   box-shadow: 0 6px 16px rgba(15,23,42,.08);
 }
+.task-grid a.current-month{
+  background:#bbf7d0;
+  border:1px solid #86efac;
+  font-weight:700;
+}
