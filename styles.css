@@ -30,7 +30,7 @@ gap:18px; padding:14px 0;
 .brand svg{width:34px;height:34px}
 .brand .name{font-weight:800; line-height:1.05}
 .brand .sub{display:block; color:var(--green); font-weight:700; font-size:13px; margin-top:2px}
-.menu{display:flex; gap:18px; align-items:center; flex-wrap:wrap; justify-content:flex-end}
+.menu{display:flex; gap:18px; align-items:center; flex-wrap:nowrap; justify-content:flex-end}
 .menu a{display:inline-flex; gap:8px; align-items:center; padding:8px 10px; border-radius:999px; color:var(--muted); font-weight:600; font-size:14px}
 .menu a:hover{background:rgba(22,163,74,.08); color:var(--ink)}
 .menu a.active{color:var(--ink)}
