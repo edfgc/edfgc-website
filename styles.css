@@ -126,6 +126,24 @@ font-size:18px;
 .card .head img{width:22px;height:22px}
 .card .date{margin-top:10px; color:var(--green-2); font-weight:800}
 .card p{margin:10px 0 0; color:var(--muted); line-height:1.55}
+
+/* Meeting Information balance */
+.card-center { text-align:center; }
+
+.head.head-center { justify-content:center; }
+
+.meet-time{
+  font-weight:800;
+  margin:6px 0 0;
+  color:var(--ink);
+}
+
+/* keep cards visually aligned */
+.cards .card{
+  display:flex;
+  flex-direction:column;
+}
+
 .footer{
 padding:30px 0;
 border-top:1px solid rgba(15,23,42,.08);
