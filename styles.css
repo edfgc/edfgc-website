@@ -133,9 +133,14 @@ font-size:18px;
 .head.head-center { justify-content:center; }
 
 .meet-time{
-  font-weight:800;
   margin:6px 0 0;
-  color:var(--ink);
+  font-weight:700;
+  color:var(--muted);
+  letter-spacing:.02em;
+}
+
+.card-center .date{
+  margin-bottom:2px;
 }
 
 /* keep cards visually aligned */
