@@ -147,6 +147,7 @@ font-size:18px;
 .cards .card{
   display:flex;
   flex-direction:column;
+  min-height:170px;
 }
 
 .footer{
