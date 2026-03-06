@@ -104,6 +104,14 @@ text-align:center;
 font-size:18px;
 color:rgba(15,23,42,.88);
 }
+.callout a{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.callout a:hover{
+  color:#16a34a;
+}
 .callout strong{color:var(--green-2)}
 .cards{
 display:grid;
