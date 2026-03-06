@@ -225,11 +225,12 @@ font-size:14px;
   letter-spacing:.5px;
 }
  /* Global link behaviour */
-main a{
+/* Global link behaviour */
+.container a{
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-main a:hover{
+.container a:hover{
   color:#16a34a !important;
 }
