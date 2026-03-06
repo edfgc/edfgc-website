@@ -132,10 +132,6 @@ font-size:18px;
 
 .head.head-center { justify-content:center; }
 
-.card-center .date{
-  margin-bottom:2px;
-}
-
 /* keep cards visually aligned */
 .cards .card{
   display:flex;
