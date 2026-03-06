@@ -104,14 +104,6 @@ text-align:center;
 font-size:18px;
 color:rgba(15,23,42,.88);
 }
-.callout strong a{
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.callout strong a:hover,
-.card strong a:hover{
-  color:#16a34a !important;
-}
 .callout strong{color:var(--green-2)}
 .cards{
 display:grid;
@@ -225,7 +217,6 @@ font-size:14px;
   letter-spacing:.5px;
 }
  /* Global link behaviour */
-/* Global link behaviour */
 .container a{
   text-decoration: underline;
   text-underline-offset: 3px;
