@@ -108,9 +108,13 @@ color:rgba(15,23,42,.88);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-111 a:hover{
-112   color:#16a34a;
-113 }
+.callout strong a:hover{
+  color:#16a34a;
+}
+
+.card strong a:hover{
+  color:#16a34a;
+}
 .callout strong{color:var(--green-2)}
 .cards{
 display:grid;
