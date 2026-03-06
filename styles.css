@@ -124,20 +124,13 @@ font-weight:900;
 font-size:18px;
 }
 .card .head img{width:22px;height:22px}
-.card .date{margin-top:10px; color:var(--green-2); font-weight:800}
-.card p{margin:10px 0 0; color:var(--muted); line-height:1.55}
+.card .date{margin-top:10px; color:var(--green-2); font-weight:700}
+.card p{margin:10px 0 0; color:var(--muted); line-height:1.55; font-weight:400}
 
 /* Meeting Information balance */
 .card-center { text-align:center; }
 
 .head.head-center { justify-content:center; }
-
-.meet-time{
-  margin:6px 0 0;
-  font-weight:700;
-  color:var(--muted);
-  letter-spacing:.02em;
-}
 
 .card-center .date{
   margin-bottom:2px;
