@@ -224,4 +224,12 @@ font-size:14px;
   font-size:14px;
   letter-spacing:.5px;
 }
- 
+ /* Global link behaviour */
+main a{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+main a:hover{
+  color:#16a34a;
+}
