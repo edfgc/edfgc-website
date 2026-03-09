@@ -225,3 +225,32 @@ font-size:14px;
 .container a:hover{
   color:#16a34a !important;
 }
+
+/* Photography notice panel (Gallery page) */
+
+.photo-notice-section{
+  padding: 0 0 40px;
+}
+
+.photo-notice-card{
+  background:#f3f7f2;
+  border:1px solid #dbe8d8;
+  border-radius:16px;
+  padding:24px 28px;
+  box-shadow:0 6px 16px rgba(15,23,42,.06);
+}
+
+.photo-notice-card h2{
+  margin-top:0;
+  margin-bottom:12px;
+  font-size:1.35rem;
+}
+
+.photo-notice-card p{
+  margin:0 0 12px;
+  line-height:1.6;
+}
+
+.photo-notice-card p:last-child{
+  margin-bottom:0;
+}
