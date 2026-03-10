@@ -8,6 +8,7 @@
   },
   {
     "date": "2026-02-10",
+    "title": "",
     "topic": "Succulent obsession",
     "speaker": "Geoff Stonebanks",
     "icon": "cactus"
@@ -21,7 +22,7 @@
   },
   {
     "date": "2026-04-14",
-  
+    "title": "",
     "topic": "Secret gardens of Sussex",
     "speaker": "Irene Willson",
     "icon": "gate"
@@ -34,15 +35,15 @@
     "icon": "tulip"
   },
   {
-    "date": "2026-06-14",
-    "title": "Monthly Meeting",
+    "date": "2026-06-09",
+    "title": "",
     "topic": "The Peonies of Highdown Gardens",
     "speaker": "Alex New",
     "icon": "peony"
   },
   {
     "date": "2026-07-14",
-    "title": "Monthly Meeting",
+    "title": "",
     "topic": "Meadow and Prairie planting",
     "speaker": "Alison Marsden",
     "icon": "meadow"
@@ -56,21 +57,21 @@
   },
   {
     "date": "2026-09-08",
-    "title": "Monthly Meeting",
+    "title": "",
     "topic": "Japanese gardens of Kyoto",
     "speaker": "Melissa Hay",
     "icon": "torii"
   },
   {
     "date": "2026-10-13",
-    "title": "Monthly Meeting",
+    "title": "",
     "topic": "Secret history of vegetables",
     "speaker": "Martyn Cox",
     "icon": "carrot"
   },
   {
     "date": "2026-11-10",
-    "title": "Monthly Meeting",
+    "title": "",
     "topic": "Lessons from Great Dixter",
     "speaker": "Edward Flint",
     "icon": "topiary"
