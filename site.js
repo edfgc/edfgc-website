@@ -18,7 +18,9 @@ async function loadCards(){
     const date = fmt(ev.date);
     const sub = ev.topic ? ev.title : '';
     const speaker = ev.speaker ? `Speaker: ${ev.speaker}` : '';
-    const desc = [
+    const desc = ev.topic === 'No meeting'
+  ? ''
+  : [
       sub ? sub : null,
       speaker ? speaker : null
     ].filter(Boolean).join(' · ');
@@ -29,7 +31,7 @@ async function loadCards(){
           <div>${escapeHtml(title)}</div>
         </div>
         <div class="date">${escapeHtml(date)}</div>
-        <p>${escapeHtml(desc || 'Details to follow')}</p>
+        <p>${escapeHtml(ev.topic === 'No meeting' ? '' : (desc || 'Details to follow'))}</p>
       </div>
     `;
   }).join('');
