@@ -31,7 +31,7 @@ async function loadCards(){
           <div>${escapeHtml(title)}</div>
         </div>
         <div class="date">${escapeHtml(date)}</div>
-        <p>${escapeHtml(ev.topic === 'No meeting' ? '' : (desc || 'Details to follow'))}</p>
+        <p>${ev.topic === 'No meeting' ? '' : escapeHtml(desc || 'Details to follow')}</p>
       </div>
     `;
   }).join('');
