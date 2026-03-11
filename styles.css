@@ -255,3 +255,51 @@ font-size:14px;
 .photo-notice-card p:last-child{
   margin-bottom:0;
 }
+/* Botanical framing for welcome section */
+
+.welcome-botanical{
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-botanical::before{
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 20px;
+  width: 160px;
+  height: 420px;
+  background-image: url("assets/img/lavender-stem.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left top;
+  opacity: 0.32;
+  pointer-events: none;
+}
+
+.welcome-botanical::after{
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: 20px;
+  width: 160px;
+  height: 420px;
+  background-image: url("assets/img/tomato-vine.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right top;
+  opacity: 0.32;
+  pointer-events: none;
+}
+
+.welcome-botanical *{
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 800px){
+  .welcome-botanical::before,
+  .welcome-botanical::after{
+    display: none;
+  }
+}
