@@ -276,7 +276,7 @@ font-size:14px;
   background-image: url("assets/img/lavender-stem.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: left top;
+  background-position: center top;
   opacity: 0.7;
   pointer-events: none;
 }
@@ -291,7 +291,7 @@ font-size:14px;
   background-image: url("assets/img/tomato-vine.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: right top;
+  background-position: center top;
   opacity: 0.7;
   pointer-events: none;
 }
