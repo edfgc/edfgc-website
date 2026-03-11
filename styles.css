@@ -269,8 +269,8 @@ font-size:14px;
 .welcome-botanical::before{
   content: "";
   position: absolute;
-  left: 60px;
-  top: 60px;
+  left: 20px;
+  top: 85px;
   width: 260px;
   height: 560px;
   background-image: url("assets/img/lavender-stem.png");
@@ -284,8 +284,8 @@ font-size:14px;
 .welcome-botanical::after{
   content: "";
   position: absolute;
-  right: 60px;
-  top: 60px;
+  right: 20px;
+  top: 85px;
   width: 260px;
   height: 560px;
   background-image: url("assets/img/tomato-vine.png");
