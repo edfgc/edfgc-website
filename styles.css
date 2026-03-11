@@ -35,6 +35,27 @@ gap:18px; padding:14px 0;
 .brand .name{font-weight:800; line-height:1.05}
 .brand .sub{display:block; color:var(--green); font-weight:700; font-size:13px; margin-top:2px}
 .menu{display:flex; gap:12px; align-items:center; flex-wrap:nowrap; justify-content:flex-end}
+.nav-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:120px;
+  padding:8px 14px;
+  border-radius:999px;
+  background:#ffffff;
+  border:1px solid rgba(15,23,42,.10);
+  color:var(--ink);
+  font-weight:700;
+  font-size:14px;
+  box-shadow:0 4px 10px rgba(15,23,42,.08);
+  transition:background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.nav-btn:hover{
+  background:#f0fdf4;
+  transform:translateY(-1px);
+  box-shadow:0 6px 14px rgba(15,23,42,.10);
+}
 .menu a{
   display:inline-flex;
   align-items:center;
