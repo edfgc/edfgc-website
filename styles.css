@@ -269,7 +269,7 @@ font-size:14px;
 .welcome-botanical::before{
   content: "";
   position: absolute;
-  left: 20px;
+  left: 0px;
   top: 85px;
   width: 260px;
   height: 560px;
@@ -284,7 +284,7 @@ font-size:14px;
 .welcome-botanical::after{
   content: "";
   position: absolute;
-  right: 20px;
+  right: 0px;
   top: 85px;
   width: 260px;
   height: 560px;
