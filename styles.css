@@ -266,14 +266,14 @@ font-size:14px;
   content: "";
   position: absolute;
   left: -40px;
-  top: 20px;
-  width: 160px;
-  height: 420px;
+  top: 0px;
+  width: 220px;
+  height: 520px;
   background-image: url("assets/img/lavender-stem.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left top;
-  opacity: 0.32;
+  opacity: 0.55;
   pointer-events: none;
 }
 
@@ -281,14 +281,14 @@ font-size:14px;
   content: "";
   position: absolute;
   right: -40px;
-  top: 20px;
-  width: 160px;
-  height: 420px;
+  top: 0px;
+  width: 220px;
+  height: 520px;
   background-image: url("assets/img/tomato-vine.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right top;
-  opacity: 0.32;
+  opacity: 0.55;
   pointer-events: none;
 }
 
