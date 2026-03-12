@@ -36,9 +36,20 @@ flex-wrap:wrap;
 }
 .brand{display:flex; align-items:center; gap:12px}
 .brand svg{width:34px;height:34px}
-.brand .name{font-weight:800; line-height:1.05}
+.brand .name{
+  font-weight:800;
+  line-height:1.05;
+  width:140px;
+}
 .brand .sub{display:block; color:var(--green); font-weight:700; font-size:13px; margin-top:2px}
-.menu{display:flex; gap:12px; align-items:center; flex-wrap:wrap; justify-content:flex-end}
+.menu{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  flex:1;
+}
 .nav-btn{
   display:inline-flex;
   align-items:center;
