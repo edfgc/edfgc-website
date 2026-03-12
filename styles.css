@@ -218,9 +218,9 @@ font-size:14px;
 }
 
 .footer-logo img{
-  height:42px;
+  height:64px;
   width:auto;
-  max-width:160px;
+  max-width:220px;
   display:block;
 }
 @media (max-width: 980px){
