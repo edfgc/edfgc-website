@@ -220,7 +220,7 @@ font-size:14px;
 .footer-logo img{
   height:28px;
   width:auto;
-  max-width:120px
+  max-width:120px;
   display:block;
 }
 @media (max-width: 980px){
