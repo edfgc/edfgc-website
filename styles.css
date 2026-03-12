@@ -276,7 +276,7 @@ font-size:14px;
   text-decoration:none !important;
 }
 .container a:hover{
-  color:#16a34a !important;
+  color:#16a34a;
 }
 
 /* Photography notice panel (Gallery page) */
