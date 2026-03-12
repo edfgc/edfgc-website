@@ -27,14 +27,18 @@ border-bottom:1px solid rgba(15,23,42,.08);
 backdrop-filter: blur(8px);
 }
 .nav{
-display:flex; align-items:center; justify-content:space-between;
-gap:18px; padding:14px 0;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:18px;
+padding:14px 0;
+flex-wrap:wrap;
 }
 .brand{display:flex; align-items:center; gap:12px}
 .brand svg{width:34px;height:34px}
 .brand .name{font-weight:800; line-height:1.05}
 .brand .sub{display:block; color:var(--green); font-weight:700; font-size:13px; margin-top:2px}
-.menu{display:flex; gap:12px; align-items:center; flex-wrap:nowrap; justify-content:flex-end}
+.menu{display:flex; gap:12px; align-items:center; flex-wrap:wrap; justify-content:flex-end}
 .nav-btn{
   display:inline-flex;
   align-items:center;
