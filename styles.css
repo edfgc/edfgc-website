@@ -265,7 +265,16 @@ font-size:14px;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-
+.topbar .brand,
+.topbar .brand:link,
+.topbar .brand:visited,
+.topbar .menu a,
+.topbar .menu a:link,
+.topbar .menu a:visited,
+.topbar .menu a:hover,
+.topbar .menu a.active{
+  text-decoration:none !important;
+}
 .container a:hover{
   color:#16a34a !important;
 }
