@@ -72,8 +72,11 @@ gap:18px; padding:14px 0;
   color:var(--ink);
   transform:translateY(-1px);
 }
-.menu a.active{color:var(--ink)}
-.menu svg{width:16px;height:16px; color:#16a34a}
+.menu a.active{
+  background:rgba(22,163,74,.18);
+  color:var(--ink);
+  border:1px solid rgba(22,163,74,.35);
+}.menu svg{width:16px;height:16px; color:#16a34a}
 .hero{
 position:relative;
 min-height:380px;
