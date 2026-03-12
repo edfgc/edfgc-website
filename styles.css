@@ -260,8 +260,8 @@ font-size:14px;
   font-size:14px;
   letter-spacing:.5px;
 }
- /* Global link behaviour */
-.container a{
+/* Global link behaviour */
+.section .container a{
   text-decoration: underline;
   text-underline-offset: 3px;
 }
