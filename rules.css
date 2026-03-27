@@ -1,0 +1,24 @@
+.rules-wrap{max-width:900px; margin:0 auto}
+.rules-card{padding:22px 22px}
+.rule{padding:16px 0; border-top:1px solid rgba(15,23,42,.08)}
+.rule:first-child{border-top:none; padding-top:0}
+.rhead{display:flex; gap:12px; align-items:flex-start}
+.rnum{
+  min-width:44px;
+  height:44px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(22,163,74,.10);
+  border:1px solid rgba(22,163,74,.20);
+  color:var(--green-2);
+  font-weight:900;
+}
+.rbody p{margin:0; color:var(--muted); line-height:1.65; font-size:16px}
+.rbody p + p{margin-top:10px}
+.subpoints{margin-top:10px}
+.subpoints p{margin:0 0 10px; color:var(--muted); font-size:16px; line-height:1.65}
+.subpoints p:last-child{margin-bottom:0}
+.docref{margin-top:18px; padding-top:16px; border-top:1px solid rgba(15,23,42,.08); color:var(--muted); font-size:14px}
+.actions{margin-top:18px; display:flex; justify-content:center}
