@@ -489,5 +489,5 @@ font-size:14px;
   display: block;
   width: 100%;
  
-  object-fit: cover;
+  object-fit: contain;
 }
