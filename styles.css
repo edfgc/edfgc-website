@@ -496,7 +496,7 @@ font-size:14px;
   display: grid;
   grid-template-columns: 140px 1fr;
   gap: 24px;
-  align-items: start;
+  align-items: center;
 }
 
 .tips-text p{
