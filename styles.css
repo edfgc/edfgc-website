@@ -478,7 +478,9 @@ font-size:14px;
   }
 }
 .tips-image{
-  margin: 20px 0 20px;
+  width: 100%;
+  max-width: 140px;
+  margin: 0;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid rgba(15,23,42,.08);
@@ -488,12 +490,11 @@ font-size:14px;
 .tips-image img{
   display: block;
   width: 100%;
- 
-  object-fit: contain;
+  height: auto;
 }
 .tips-split{
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 140px 1fr;
   gap: 24px;
   align-items: start;
 }
