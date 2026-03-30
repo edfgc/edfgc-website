@@ -488,6 +488,6 @@ font-size:14px;
 .tips-image img{
   display: block;
   width: 100%;
-  max-height: 320px;
+ 
   object-fit: cover;
 }
