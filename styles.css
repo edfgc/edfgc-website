@@ -491,3 +491,20 @@ font-size:14px;
  
   object-fit: contain;
 }
+.tips-split{
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.tips-text p{
+  margin-top: 0;
+}
+
+/* Make it stack on mobile */
+@media (max-width: 700px){
+  .tips-split{
+    grid-template-columns: 1fr;
+  }
+}
