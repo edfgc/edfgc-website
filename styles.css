@@ -428,7 +428,7 @@ font-size:14px;
 .grid-2{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  gap: 32px;
   align-items: stretch;
 }
 
@@ -454,7 +454,10 @@ font-size:14px;
   margin: 0 0 14px 0;
   letter-spacing: -.3px;
 }
-
+.page-hero + main .card:hover{
+  transform: none;
+  box-shadow: 0 6px 16px rgba(15,23,42,.06);
+}
 @media (max-width: 900px){
   .grid-2{
     grid-template-columns: 1fr;
