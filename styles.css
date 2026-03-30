@@ -493,7 +493,7 @@ font-size:14px;
 }
 .tips-split{
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 240px 1fr;
   gap: 24px;
   align-items: start;
 }
