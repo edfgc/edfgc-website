@@ -495,7 +495,7 @@ font-size:14px;
 .tips-split{
   display: grid;
   grid-template-columns: 140px 1fr;
-  gap: 80px;
+  gap: 24px;
   align-items: center;
 }
 
