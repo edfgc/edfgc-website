@@ -116,9 +116,14 @@ To join the club, please speak to a member at one of our meetings or use the con
       <textarea id="join-message" name="message" rows="7" required>I would like to enquire about joining the East Dean &amp; Friston Gardening Club.</textarea>
     </div>
 
-    <input type="hidden" name="_subject" value="EDFGC website contact form submission">
+   <div class="hidden-field" aria-hidden="true">
+  <label for="join-website">Website</label>
+  <input id="join-website" name="website" type="text" tabindex="-1" autocomplete="off">
+</div>
 
-    <button class="btn" type="submit">Send enquiry</button>
+<input type="hidden" name="_subject" value="EDFGC website contact form submission">
+
+<button class="btn" type="submit">Send enquiry</button>
   </form>
 
   <p>
