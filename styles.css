@@ -552,3 +552,12 @@ font-size:14px;
 .contact-form .btn{
   margin-top: 10px;
 }  
+.callout a{
+  color: var(--green-2);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.callout a:hover{
+  color: var(--green);
+}
