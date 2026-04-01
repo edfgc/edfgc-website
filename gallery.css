@@ -86,10 +86,6 @@
   box-shadow:0 6px 14px rgba(0,0,0,.15);
   z-index:10001;
 }
-
-.lightbox .close:hover{
-  background:#fff;
-}
 .lightbox .close:hover{
   background:#fff;
 }
