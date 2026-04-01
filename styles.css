@@ -569,3 +569,10 @@ font-size:14px;
   height:1px;
   overflow:hidden;
 }
+.site-announcement{
+  background:#fff3cd;
+  border:1px solid #ffeeba;
+  padding:12px;
+  margin-bottom:20px;
+  border-radius:6px;
+}
