@@ -129,35 +129,11 @@
 </div>
 
 <script src="site.js"></script>
-  <div class="lightbox" id="lightbox" aria-hidden="true">
- <div class="close" id="lightboxClose" aria-label="Close photo">Close photo</div>
-  <img id="lightboxImg" alt="">
-</div>
-  <script>
-(() => {
-  const lb = document.getElementById("lightbox");
-  const lbImg = document.getElementById("lightboxImg");
-  const lbClose = document.getElementById("lightboxClose");
-  const grid = document.querySelector(".gallery-grid");
 
-  if (!lb || !lbImg || !lbClose || !grid) return;
-
-  function openLightbox(src, alt){
-    lbImg.src = src;
-    lbImg.alt = alt || "";
-    lb.classList.add("open");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeLightbox(){
-    lb.classList.remove("open");
-    lbImg.src = "";
-    document.body.style.overflow = "";
- <script src="site.js"></script>
 <div class="lightbox" id="lightbox" aria-hidden="true">
-  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">‹</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo" type="button">‹</button>
   <img id="lightboxImg" alt="">
-  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">›</button>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo" type="button">›</button>
   <button class="close" id="lightboxClose" aria-label="Close photo" type="button">Close photo</button>
 </div>
 
@@ -243,4 +219,5 @@
 })();
 </script>
 </body>
+</html>
 </html>
