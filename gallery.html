@@ -153,12 +153,76 @@
     lb.classList.remove("open");
     lbImg.src = "";
     document.body.style.overflow = "";
+ <script src="site.js"></script>
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">‹</button>
+  <img id="lightboxImg" alt="">
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">›</button>
+  <button class="close" id="lightboxClose" aria-label="Close photo" type="button">Close photo</button>
+</div>
+
+<script>
+(() => {
+  const lb = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lightboxImg");
+  const lbClose = document.getElementById("lightboxClose");
+  const lbPrev = document.getElementById("lightboxPrev");
+  const lbNext = document.getElementById("lightboxNext");
+  const figures = Array.from(document.querySelectorAll(".gallery-grid figure"));
+
+  if (!lb || !lbImg || !lbClose || !lbPrev || !lbNext || !figures.length) return;
+
+  const items = figures.map((figure) => {
+    const img = figure.querySelector("img");
+    const caption = figure.querySelector("figcaption");
+    return {
+      src: img ? img.src : "",
+      alt: caption ? caption.textContent.trim() : (img?.alt || "")
+    };
+  });
+
+  let currentIndex = 0;
+
+  function renderLightbox(index) {
+    const item = items[index];
+    if (!item) return;
+    lbImg.src = item.src;
+    lbImg.alt = item.alt || "";
+    currentIndex = index;
   }
 
-  grid.addEventListener("click", (e) => {
-    const img = e.target.closest("img");
+  function openLightbox(index) {
+    renderLightbox(index);
+    lb.classList.add("open");
+    lb.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    lb.classList.remove("open");
+    lb.setAttribute("aria-hidden", "true");
+    lbImg.src = "";
+    lbImg.alt = "";
+    document.body.style.overflow = "";
+  }
+
+  function showPrevious() {
+    const newIndex = (currentIndex - 1 + items.length) % items.length;
+    renderLightbox(newIndex);
+  }
+
+  function showNext() {
+    const newIndex = (currentIndex + 1) % items.length;
+    renderLightbox(newIndex);
+  }
+
+  figures.forEach((figure, index) => {
+    const img = figure.querySelector("img");
     if (!img) return;
-    openLightbox(img.src, img.alt);
+
+    img.addEventListener("click", () => {
+      openLightbox(index);
+    });
   });
 
   lb.addEventListener("click", (e) => {
@@ -166,9 +230,15 @@
   });
 
   lbClose.addEventListener("click", closeLightbox);
+  lbPrev.addEventListener("click", showPrevious);
+  lbNext.addEventListener("click", showNext);
 
   document.addEventListener("keydown", (e) => {
+    if (!lb.classList.contains("open")) return;
+
     if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft") showPrevious();
+    if (e.key === "ArrowRight") showNext();
   });
 })();
 </script>
