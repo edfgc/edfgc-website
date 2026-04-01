@@ -111,3 +111,10 @@
   box-shadow:0 6px 14px rgba(0,0,0,.15);
   z-index:10001;
 }
+.lightbox-prev{
+  left:18px;
+}
+
+.lightbox-next{
+  right:18px;
+}
