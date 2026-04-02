@@ -576,8 +576,9 @@ font-size:14px;
   margin-bottom:20px;
   border-radius:6px;
 }
-.site-announcement.urgent{
-  background:#000000;
-  color:#ffe600;
-  border:2px solid #ffe600;
+.site-announcement.urgent::before{
+  content:"!";
+  font-weight:900;
+  font-size:22px;
+  margin-right:10px;
 }
