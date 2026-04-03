@@ -66,9 +66,12 @@ flex-wrap:wrap;
   transition:background .2s ease, transform .2s ease, box-shadow .2s ease;
 }
 .site-announcement.urgent{
+ .site-announcement.urgent{
   background:#000000;
   color:#ffe600;
   border:2px solid #ffe600;
+  font-size:18px;
+  font-weight:600;
 }
 .nav-btn:hover{
   background:#f0fdf4;
