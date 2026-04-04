@@ -1,6 +1,7 @@
 async function loadCards(){
   const grid = document.querySelector('[data-cards]');
   if(!grid) return;
+
   const res = await fetch('assets/events.json', {cache:'no-store'});
   const events = await res.json();
 
@@ -12,20 +13,28 @@ async function loadCards(){
     return d.toLocaleDateString(undefined, {month:'long', day:'numeric', year:'numeric'});
   };
 
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
   grid.innerHTML = show.map(ev => {
     const icon = `assets/icons/${ev.icon}.svg?v=2`;
     const title = ev.topic || ev.title;
     const date = fmt(ev.date);
     const sub = ev.topic ? ev.title : '';
     const speaker = ev.speaker ? `Speaker: ${ev.speaker}` : '';
+    const eventDate = new Date(ev.date + 'T00:00:00');
+    const isPastEvent = eventDate < today;
+    const cardClass = isPastEvent ? 'card past-event' : 'card';
+
     const desc = ev.topic === 'No meeting'
-  ? ''
-  : [
-      sub ? sub : null,
-      speaker ? speaker : null
-    ].filter(Boolean).join(' · ');
+      ? ''
+      : [
+          sub ? sub : null,
+          speaker ? speaker : null
+        ].filter(Boolean).join(' · ');
+
     return `
-      <div class="card">
+      <div class="${cardClass}">
         <div class="head">
           <img src="${icon}" alt="" aria-hidden="true">
           <div>${escapeHtml(title)}</div>
