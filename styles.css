@@ -190,7 +190,19 @@ font-size:18px;
 .card .head img{width:22px;height:22px}
 .card .date{margin-top:10px; color:var(--green-2); font-weight:700}
 .card p{margin:14px 0 0; color:var(--muted); line-height:1.55; font-weight:400}
+.card.past-event{
+  background:#f8fafc;
+  border-color:rgba(15,23,42,.12);
+  box-shadow:0 4px 10px rgba(15,23,42,.04);
+}
 
+.card.past-event .date{
+  color:#64748b;
+}
+
+.card.past-event p{
+  color:#64748b;
+}
 /* Meeting Information balance */
 .card-center { text-align:center; }
 
