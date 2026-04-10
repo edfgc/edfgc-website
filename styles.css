@@ -397,7 +397,7 @@ font-size:14px;
   z-index: 2;
 }
 
-@media (max-width: 800px){
+@media (max-width: 1100px){
   .welcome-botanical::before,
   .welcome-botanical::after{
     display: none;
