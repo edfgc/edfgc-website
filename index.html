@@ -78,35 +78,26 @@
 HOMEPAGE ANNOUNCEMENT – QUICK GUIDE
 
 SHOW a normal message (yellow box):
-<div class="site-announcement">
+Use: div class="site-announcement"
 
 SHOW an urgent message (black & yellow):
-<div class="site-announcement urgent">
+Use: div class="site-announcement urgent"
 
 SWITCH urgent → normal:
 Remove the word "urgent"
 
 HIDE the message completely:
-Add these two lines around the announcement block:
+Add an HTML comment line above the announcement block
+and an HTML comment end line below the announcement block.
 
-<!--   ← add this line ABOVE the announcement -->
-...announcement code here...
--->   ← add this line BELOW the announcement -->
+Comment start = less-than, exclamation mark, hyphen, hyphen
+Comment end   = hyphen, hyphen, greater-than
 
 IMPORTANT
 - Only use ONE announcement at a time
 - "urgent" = black/yellow emergency message
 - No "urgent" = normal yellow message
 -->
-
-
-<div class="site-announcement urgent">
-  <strong>Website preview:</strong> Test Notice
-</div>
-
-    <h2>Welcome to Our Gardening Community</h2>
-    <div class="icon-lines">
-      <div class="line">
         <img src="assets/icons/leaf.svg" alt="" aria-hidden="true">
         <div class="lead">At East Dean and Friston Gardening Club, we know the wellbeing, joy and community that comes from our gardens and our gardening club. We'd like to invite you to come along and be inspired, make new friends and learn new tips and tricks with our programme of events.</div>
       </div>
