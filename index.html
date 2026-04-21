@@ -75,32 +75,36 @@
 <section class="section white welcome-botanical">
   <div class="container">
 <!--
-HOMEPAGE ANNOUNCEMENT – QUICK GUIDE
+HOMEPAGE ANNOUNCEMENT – HOW TO USE
 
-SHOW a normal message (yellow box):
-Use: div class="site-announcement"
+To SHOW the message:
+Delete the comment-start line immediately above the announcement block.
+Delete the comment-end line immediately below the announcement block.
 
-SHOW an urgent message (black & yellow):
-Use: div class="site-announcement urgent"
+To HIDE the message:
+Add a comment-start line immediately above the announcement block.
+Add a comment-end line immediately below the announcement block.
 
-SWITCH urgent → normal:
-Remove the word "urgent"
+Hidden example:
+comment-start line
+<div class="site-announcement urgent">
+  <strong>Announcement:</strong> MESSAGE TEXT TO BE DISPLAYED
+</div>
+comment-end line
 
-HIDE the message completely:
-Add an HTML comment line above the announcement block
-and an HTML comment end line below the announcement block.
+Visible example:
+<div class="site-announcement urgent">
+  <strong>Announcement:</strong> MESSAGE TEXT TO BE DISPLAYED
+</div>
 
-Comment start = less-than, exclamation mark, hyphen, hyphen
-Comment end   = hyphen, hyphen, greater-than
-
-IMPORTANT
-- Only use ONE announcement at a time
-- "urgent" = black/yellow emergency message
-- No "urgent" = normal yellow message
+Notes:
+- Keep only ONE announcement block
+- Add "urgent" for black/yellow styling
+- Remove "urgent" for standard styling
 -->
        <!--
     <div class="site-announcement urgent">
-      <strong>Website preview:</strong> Test Notice
+      <strong>Announcement:</strong> MESSAGE TEXT TO BE DISPLAYED
     </div>
     -->
      <h2>Welcome to Our Gardening Community</h2>
