@@ -469,6 +469,18 @@ font-size:14px;
   transform: none;
   box-shadow: 0 6px 16px rgba(15,23,42,.06);
 }
+/* Re-enable hover effects for clickable Tips topic cards */
+
+.page-hero + main .tips-link-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15,23,42,.12);
+}
+
+/* Add spacing between Tips intro text and topic cards */
+
+.card .grid-2{
+  margin-top: 28px;
+}
 @media (max-width: 900px){
   .grid-2{
     grid-template-columns: 1fr;
