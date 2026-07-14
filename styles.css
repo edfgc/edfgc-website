@@ -627,3 +627,58 @@ font-size:14px;
   color:#5f6b63;
   font-style:italic;
 }
+/* Summer Fête home-page feature */
+
+.fete-feature{
+  padding:32px 0;
+  background:#ffffff;
+}
+
+.fete-panel{
+  display:grid;
+  grid-template-columns:minmax(220px, 36%) 1fr;
+  gap:32px;
+  align-items:center;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:24px;
+  box-shadow:var(--shadow);
+}
+
+.fete-image img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:12px;
+}
+
+.fete-content h2{
+  text-align:left;
+  margin:0 0 14px;
+  font-size:32px;
+  line-height:1.15;
+}
+
+.fete-content p{
+  margin:0 0 20px;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.6;
+}
+
+.fete-content .btn{
+  display:inline-block;
+  text-align:center;
+  text-decoration:none;
+}
+
+@media (max-width:700px){
+  .fete-panel{
+    grid-template-columns:1fr;
+  }
+
+  .fete-content h2{
+    font-size:28px;
+  }
+}
