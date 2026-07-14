@@ -683,3 +683,33 @@ font-size:14px;
     font-size:28px;
   }
 }
+/* Summer Fête announcement */
+
+.fete-announcement-card{
+  display:grid;
+  grid-template-columns:1.5fr 1fr;
+  gap:2rem;
+  align-items:start;
+}
+
+.fete-announcement-text{
+  min-width:0;
+}
+
+.fete-announcement-card figure{
+  margin:0;
+}
+
+.fete-announcement-card img{
+  width:100%;
+  max-width:340px;
+  height:auto;
+  display:block;
+  margin:0 auto;
+}
+
+@media (max-width:800px){
+  .fete-announcement-card{
+    grid-template-columns:1fr;
+  }
+}
