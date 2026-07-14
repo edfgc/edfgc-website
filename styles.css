@@ -631,13 +631,13 @@ font-size:14px;
 
 .fete-feature{
   padding:32px 0;
-  background:#ffffff;
+  background:var(--mint);
 }
 
 .fete-panel{
   display:grid;
   grid-template-columns:minmax(220px, 36%) 1fr;
-  gap:32px;
+  gap:40px;
   align-items:center;
   background:var(--card);
   border:1px solid var(--border);
@@ -656,14 +656,14 @@ font-size:14px;
 .fete-content h2{
   text-align:left;
   margin:0 0 14px;
-  font-size:32px;
+  font-size:40px;
   line-height:1.15;
 }
 
 .fete-content p{
-  margin:0 0 20px;
+  margin:0 0 24px;
   color:var(--muted);
-  font-size:18px;
+  font-size:20px;
   line-height:1.6;
 }
 
@@ -671,6 +671,7 @@ font-size:14px;
   display:inline-block;
   text-align:center;
   text-decoration:none;
+  padding:14px 22px;
 }
 
 @media (max-width:700px){
