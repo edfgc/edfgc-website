@@ -627,3 +627,10 @@ font-size:14px;
   color:#5f6b63;
   font-style:italic;
 }
+/* Past announcements */
+
+.past-announcements{
+  display:flex;
+  flex-direction:column;
+  gap:2rem;
+}
