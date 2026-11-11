@@ -34,6 +34,12 @@ async function loadCards(){
           speaker ? speaker : null
         ].filter(Boolean).join(' · ');
 
+    const details = ev.title === 'Christmas Tea'
+      ? `<p><strong>Christmas Tea — FULLY BOOKED</strong></p>
+         <hr>
+         <p>Next club meeting: Tuesday 12th January 2027</p>`
+      : `<p>${ev.topic === 'No meeting' ? '' : escapeHtml(desc || 'Details to follow')}</p>`;
+
     return `
       <div class="${cardClass}">
         <div class="head">
@@ -41,11 +47,7 @@ async function loadCards(){
           <div>${escapeHtml(title)}</div>
         </div>
         <div class="date">${escapeHtml(date)}</div>
-        <p>${ev.topic === 'No meeting' ? '' : escapeHtml(
-          desc || (ev.title === 'Christmas Tea'
-            ? 'FULLY BOOKED · Next club meeting: Tuesday 12th January 2027'
-            : 'Details to follow')
-        )}</p>
+        ${details}
       </div>
     `;
   }).join('');
