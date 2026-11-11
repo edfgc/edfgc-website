@@ -1,3 +1,4 @@
+
 async function loadCards(){
   const grid = document.querySelector('[data-cards]');
   if(!grid) return;
@@ -40,7 +41,11 @@ async function loadCards(){
           <div>${escapeHtml(title)}</div>
         </div>
         <div class="date">${escapeHtml(date)}</div>
-        <p>${ev.topic === 'No meeting' ? '' : escapeHtml(desc || 'Details to follow')}</p>
+        <p>${ev.topic === 'No meeting' ? '' : escapeHtml(
+          desc || (ev.title === 'Christmas Tea'
+            ? 'FULLY BOOKED · Next club meeting: Tuesday 12th January 2027'
+            : 'Details to follow')
+        )}</p>
       </div>
     `;
   }).join('');
